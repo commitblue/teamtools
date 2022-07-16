@@ -3,9 +3,10 @@ local teams = game:GetService("Teams")
 local teamtoolconifg = require(script.Parent:WaitForChild("teamtoolconfig"))
 
 for _,v in teamtoolconifg do
-    if v ~= nil then
-        print(typeof(v))
-        v:SetAttribute("TeamTool", true)
+    for _,v in v do
+        if v ~= nil then
+            v:SetAttribute("TeamTool", true)
+        end 
     end
 end
 
