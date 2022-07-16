@@ -14,6 +14,9 @@ for i,v in teamtoolconifg do
     if i ~= nil then
         if v ~= nil then
             i.PlayerAdded:Connect(function(plr)
+                if plr ~= nil then else
+                    return
+                end
                 for _,tool in plr.Character:GetDescendants() do
                     if tool:GetAttribute("TeamTool") then
                         tool:Destroy()
