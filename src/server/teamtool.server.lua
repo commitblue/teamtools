@@ -4,6 +4,7 @@ local teamtoolconifg = require(script.Parent:WaitForChild("teamtoolconfig"))
 
 for _,v in teamtoolconifg do
     if v ~= nil then
+        print(typeof(v))
         v:SetAttribute("TeamTool", true)
     end
 end
